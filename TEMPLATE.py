@@ -2,6 +2,15 @@
 
 import re
 
+# ##############################################################
+# Initialisation d'une nouvelle zone pour le template.
+#	parent ==> Noeud Parent (NULL si racine)
+#	htmlFile ==> Fichier HTML de la zone
+#	html ==> Code HTML de la zone
+#	section ==> Nom de la section
+#	uniqID ==> identifiant unique
+#	
+# ##############################################################
 class TemplateItem:
 	def __init__(self, parent, htmlFile, html=None, section="ROOT", uniqID="ROOT"):
 		if parent is None:
@@ -20,6 +29,11 @@ class TemplateItem:
 
 		self.initAllAvailableSection()
 	
+
+
+# ##############################################################
+# Initialise toutes les parties du code HTML.
+# ##############################################################
 
 	def initAllAvailableSection(self):
 		

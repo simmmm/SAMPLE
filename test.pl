@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+use Data::Dumper;
+
 my $var = "SimonTest";
 
 printf $var . "\n";
@@ -25,3 +27,7 @@ foreach my $c (@b)
 {
 	printf $c."\n";
 }
+
+my %result = map { $_ => 1} @b;
+
+print Dumper(\%result);
