@@ -1,6 +1,8 @@
 #!/usr/bin/perl
 
 use Data::Dumper;
+use XML::Writer;
+use IO::File;
 
 my $var = "SimonTest";
 
@@ -31,3 +33,20 @@ foreach my $c (@b)
 my %result = map { $_ => 1} @b;
 
 print Dumper(\%result);
+
+my $output = IO::File->new(">output.xml");
+
+my $writer = XML::Writer->new(OUTPUT => $output);
+
+$writer->startTag("ROOT");
+
+for my $key (keys(%result))
+{
+	$writer->dataElement("CLEF", $result{$key}, name => $key);
+}
+
+$writer->endTag("ROOT");
+
+$writer->end();
+
+
