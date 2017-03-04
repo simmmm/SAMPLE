@@ -49,4 +49,18 @@ $writer->endTag("ROOT");
 
 $writer->end();
 
+=Commentaire
+Allo
+Commentaire
+Test
+=cut
 
+my $USAGE = << "DESC_CMD";
+
+Bonjour test nbla bla bla....
+
+DESC_CMD
+
+print $USAGE . "\n";
+
+print "END SCRIPT\n"
