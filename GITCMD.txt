@@ -1,0 +1,9 @@
+GIT COMMAND
+
+git add <fichier>
+
+git commit -m <message>
+
+git push origin <BRANCH>
+
+
